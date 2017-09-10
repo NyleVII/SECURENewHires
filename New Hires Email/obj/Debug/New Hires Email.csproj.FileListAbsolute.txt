@@ -1,0 +1,14 @@
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\bin\Debug\New Hires Email.exe.config
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\bin\Debug\New Hires Email.exe
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\bin\Debug\New Hires Email.pdb
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email.csprojResolveAssemblyReference.cache
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\MainWindow.g.cs
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\App.g.cs
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email_MarkupCompile.cache
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email_MarkupCompile.lref
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\MainWindow.baml
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email.g.resources
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New_Hires_Email.Properties.Resources.resources
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email.csproj.GenerateResource.Cache
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email.exe
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email.pdb
