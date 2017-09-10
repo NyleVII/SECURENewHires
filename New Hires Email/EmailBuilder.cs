@@ -27,9 +27,9 @@ namespace New_Hires_Email
             client.EnableSsl = true;
             // Credentials are necessary if the server requires the client 
             // to authenticate before it will send e-mail on the client's behalf.
-            //client.UseDefaultCredentials = true; //Will use windows login credentials
-            client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential("santymis@secure-energy.com", "password"); //This really shouldn't be stored in plaintext, but roll with it for now
+            client.UseDefaultCredentials = true; //Will use windows login credentials
+            //client.UseDefaultCredentials = false;
+           // client.Credentials = new NetworkCredential("santymis@secure-energy.com", "password"); //This really shouldn't be stored in plaintext, but roll with it for now
 
             try
             {

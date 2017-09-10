@@ -11,3 +11,4 @@ D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Release\New_
 D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Release\New Hires Email.csproj.GenerateResource.Cache
 D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Release\New Hires Email.exe
 D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Release\New Hires Email.pdb
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Release\New Hires Email.csprojResolveAssemblyReference.cache
