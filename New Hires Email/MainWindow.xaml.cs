@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -43,6 +45,7 @@ namespace New_Hires_Email
             Debug.WriteLine("SMTP_Encryption: " + ConfigurationManager.AppSettings["SMTP_Encryption"]);
             Debug.WriteLine("Test Address: " + ConfigurationManager.AppSettings["TestAddress"]);
             Debug.WriteLine(Convert.ToInt32(ConfigurationManager.AppSettings["SMTP_Port"]) * 2); //Converts value from string to Int for testing
+            Debug.WriteLine("Username:" + CredentialCache.DefaultNetworkCredentials.UserName);
         }
 
         
@@ -64,12 +67,15 @@ namespace New_Hires_Email
         #endregion
 
         #region Methods
+ 
         private void Button_Run_Click(object sender, RoutedEventArgs e)
         {
             this.counter.incrementCount();
             UpdateCounterVisual();
+            Debug.WriteLine(passwordBox.Password);
+            emailBuilder.toSecureString(this);
             Debug.WriteLine("Calling Email Builder");
-            EmailBuilder.createMessage();
+            EmailBuilder.createMessage(this);
         }
         private void checkBox_Checked(object sender, RoutedEventArgs e)
         {
@@ -82,16 +88,6 @@ namespace New_Hires_Email
             this.counter.decrementCount();
             UpdateCounterVisual();
         }
-        private void Button_Run_Click()
-        {
-            //this.counter.incrementCount();
-            //UpdateCounterVisual();
-            //subjectTextLabel.Content = emailBuilder.certifyEmailSubject(firstNameTextBox.Text, lastNameTextBox.Text);
-            //this.bodyTextLabel.Content = emailBuilder.certifyEmailBody(firstNameTextBox.Text, lastNameTextBox.Text);
-            //Debug.WriteLine("Calling Email Builder");
-            //EmailBuilder.createMessage();
-            
-        }
 
         private void UpdateCounterVisual()
         {
@@ -100,8 +96,18 @@ namespace New_Hires_Email
             bodyTextLabel.Content = emailBuilder.certifyEmailBody(firstNameTextBox.Text, lastNameTextBox.Text);
             subjectTextLabel.Content = emailBuilder.certifyEmailSubject(firstNameTextBox.Text, lastNameTextBox.Text);
         }
-        #endregion
-       
 
+        #endregion
+
+        private void textBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine(passwordBox.Password.ToString());
+            //emailBuilder.toSecureString(this);
+        }
     }
 }

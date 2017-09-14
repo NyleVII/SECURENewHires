@@ -12,3 +12,5 @@ D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New_Hi
 D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email.csproj.GenerateResource.Cache
 D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email.exe
 D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\New Hires Email.pdb
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\CredPrompt.g.cs
+D:\Projects\NewHires\SECURE New Hire Automation\New Hires Email\obj\Debug\CredPrompt.baml

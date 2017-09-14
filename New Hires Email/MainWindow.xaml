@@ -16,7 +16,7 @@
         <CheckBox x:Name="iTrakCheckBox" Content="" HorizontalAlignment="Left" Margin="192,198,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
         <Label x:Name="iTrakLabel" Content="iTrak:" HorizontalAlignment="Left" Margin="133,192,0,0" VerticalAlignment="Top" />
         <CheckBox x:Name="mudtracCheckBox" Content="" HorizontalAlignment="Left" Margin="192,223,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Width="149" Margin="0,0,0,288" Source="awesomeSmiley.png"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Width="190" Margin="0,0,0,384" Source="awesomeSmiley.png"/>
         <Label x:Name="mudtracLabel" Content="Mudtrac:" HorizontalAlignment="Left" Margin="133,215,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Button_Run" Content="Run" HorizontalAlignment="Left" Margin="652,418,0,0" VerticalAlignment="Top" Width="75"/>
         <Label x:Name="firstNameLabel" Content="First Name:" HorizontalAlignment="Left" Margin="233,37,0,0" VerticalAlignment="Top"/>
@@ -44,8 +44,8 @@
         <TextBox x:Name="costCenterTextBox" HorizontalAlignment="Left" Height="23" Margin="303,109,0,0" TextWrapping="Wrap" Text="{}{cost center}" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="solverCheckBox" Content="" HorizontalAlignment="Left" Margin="192,247,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
         <Label x:Name="SolverLabel" Content="Solver:" HorizontalAlignment="Left" Margin="133,241,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="axCheckBox" Content="" HorizontalAlignment="Left" Margin="192,273,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
-        <Label x:Name="axLabel" Content="AX:" HorizontalAlignment="Left" Margin="133,267,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="axCheckBox" Content="" HorizontalAlignment="Left" Margin="472,215,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
+        <Label x:Name="axLabel" Content="AX:" HorizontalAlignment="Left" Margin="440,208,0,0" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" Margin="597,173,0,0" VerticalAlignment="Top"/>
         <Label x:Name="bodyLabel" Content="Body:" HorizontalAlignment="Left" Margin="53,359,0,0" VerticalAlignment="Top"/>
         <Label x:Name="subjectLabel" Content="Subject:" HorizontalAlignment="Left" Margin="41,332,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.196,0.095"/>
@@ -55,5 +55,14 @@
         <Label x:Name="openInvoiceLabel" Content="Open Invoice:" HorizontalAlignment="Left" Margin="225,169,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="rentracCheckBox" Content="" HorizontalAlignment="Left" Margin="310,198,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
         <Label x:Name="rentracLabel" Content="Rentrac:" HorizontalAlignment="Left" Margin="225,192,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Width="75" Click="loginButton_Click"/>
+        <Label x:Name="loginLabel" Content="Office 365 Login:" HorizontalAlignment="Left" Margin="0,69,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="emailLoginLabel" Content="E-Mail:" HorizontalAlignment="Left" Margin="16,96,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="emailLoginTextBox" HorizontalAlignment="Left" Height="23" Margin="62,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" TextChanged="textBox_TextChanged_1"/>
+        <Label x:Name="passwordLoginLabel" Content="Password:" HorizontalAlignment="Left" Margin="0,124,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="62,127,0,0" VerticalAlignment="Top" Width="111" Height="23"/>
+        <Button x:Name="attachAXButton" Content="Attach File" HorizontalAlignment="Left" Margin="497,211,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="AXAdditionalLabel" Content="Additional AX Text:" HorizontalAlignment="Left" Margin="577,208,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AXTextTextBox" HorizontalAlignment="Left" Height="23" Margin="692,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

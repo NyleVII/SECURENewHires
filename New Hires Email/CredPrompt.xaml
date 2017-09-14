@@ -1,0 +1,18 @@
+﻿<Window x:Name="E_Mail_Credentials" x:Class="New_Hires_Email.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:New_Hires_Email"
+        mc:Ignorable="d"
+        Title="E-Mail Credentials" Height="227.329" Width="276.708">
+    <Grid Margin="0,0,2,1">
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Height="23" Margin="72,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+        <Label x:Name="usernameLabel" Content="E-Mail:" HorizontalAlignment="Left" Margin="26,69,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="passwordLabel" Content="Password:" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Please provide your e-mail credentials." HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="credentialSubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="158,151,0,0" VerticalAlignment="Top" Width="75"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="72,100,0,0" VerticalAlignment="Top" Width="185" Height="23"/>
+
+    </Grid>
+</Window>

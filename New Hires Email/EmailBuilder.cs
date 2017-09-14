@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,10 +13,23 @@ namespace New_Hires_Email
 {
     class EmailBuilder
     {
-        
+        static string username;
+        static SecureString userPass;
+
+        public void toSecureString(MainWindow window)
+        {
+            username = window.emailLoginTextBox.Text;
+
+            userPass = new SecureString();
+            foreach (char c in window.passwordBox.Password.ToString())
+            {
+                userPass.AppendChar(c);
+            }
+            Debug.WriteLine(userPass);
+        }
 
         #region EMail message
-        public static void createMessage()
+        public static void createMessage(MainWindow window)
         {
             String server = ConfigurationManager.AppSettings["SMTP_Server"];
             string to = ConfigurationManager.AppSettings["TestAddress"];
@@ -27,9 +41,10 @@ namespace New_Hires_Email
             client.EnableSsl = true;
             // Credentials are necessary if the server requires the client 
             // to authenticate before it will send e-mail on the client's behalf.
-            client.UseDefaultCredentials = true; //Will use windows login credentials
-            //client.UseDefaultCredentials = false;
-           // client.Credentials = new NetworkCredential("santymis@secure-energy.com", "password"); //This really shouldn't be stored in plaintext, but roll with it for now
+            client.Credentials = new NetworkCredential(username, userPass); //This really shouldn't be stored in plaintext, but roll with it for now
+
+
+            Debug.WriteLine(CredentialCache.DefaultNetworkCredentials.UserName);
 
             try
             {
@@ -50,17 +65,54 @@ namespace New_Hires_Email
         {
             return ConfigurationManager.AppSettings["CertifyAddress"];
         }
-        public String certifyEmailBody(String firstName, String lastName)
-        {
-            Console.WriteLine("Please provide certify access to " + firstName + " " + lastName + "\nThank you.");
-            return "Please provide certify access to " + firstName + " " + lastName + "\nThank you.";
-        }
 
         public String certifyEmailSubject(String firstName, String lastName)
         {
             return "Certify Access - " + firstName + " " + lastName;
         }
 
+        public String certifyEmailBody(String firstName, String lastName)
+        {
+            return "Please provide certify access to " + firstName + " " + lastName + "\nThank you.";
+        }
+        #endregion
+
+        #region Mudtrac
+
+        public String mudtracEmailTo()
+        {
+            return ConfigurationManager.AppSettings["MudtracAddress"];
+        }
+
+        public String mudtracEmailSubject(String firstName, String lastName)
+        {
+            return "Mudtrac Access - " + firstName + " " + lastName;
+        }
+
+        public String mudtracEmailBody(String firstName, String lastName)
+        {
+            return "Please provide Mudtrac access to " + firstName + " " + lastName + "\nThank you.";
+        }
+        #endregion
+
+        #region Solver
+
+        public String solverEmailTo()
+        {
+            return ConfigurationManager.AppSettings["SolverAddress"];
+        }
+
+        public String solverEmailSubject(String firstName, String lastName)
+        {
+            return "Solver Access - " + firstName + " " + lastName;
+        }
+
+        public String solverEmailBody(String firstName, String lastName)
+        {
+            return "Please provide solver access to " + firstName + " " + lastName + "\nThank you.";
+        }
+
+       
         #endregion
     }
 }
